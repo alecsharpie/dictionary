@@ -1,7 +1,7 @@
 import requests
 import sys
 
-sys.args()
+
 
 def get_origin(word):
     response = requests.get(f'https://api.dictionaryapi.dev/api/v2/entries/en/{word}').json()
@@ -9,4 +9,4 @@ def get_origin(word):
 
 
 if __name__ == "__main__":
-    print(get_origin())
+    print(get_origin(sys.argv[1]))
